@@ -1,0 +1,35 @@
+Date: June 14, 2024
+Time: 10:00 AM - 11:00 AM
+Participants:
+ • Alice (Product Manager)
+ • Bob (Software Engineer)
+ • Charlie (QA Lead)
+ • David (Customer Support)
+ • Emma (UI/UX Designer)
+
+10:00 AM - 10:05 AM: Introductions and Agenda Setting
+Alice: Hey everyone, thanks for jumping on this call at such short notice. So, we've got a pretty pressing issue with the login functionality after the last update. I want us to go over what's happening, why it's happening, and how we can fix it quickly. Let’s start with a quick hello for anyone who’s new.
+David: Hi all, I’m David from Customer Support. Nice to meet everyone!
+Charlie: Hey, Charlie here, QA Lead.
+Emma: Hi, I'm Emma, the UI/UX Designer.
+Bob: And I’m Bob, the Software Engineer.
+10:05 AM - 10:15 AM: Issue Description
+David: So, here's the deal. We've been getting a lot of complaints from users who can't log in. They keep seeing an "Invalid credentials" error even though they're sure their details are right. This started right after our update last Friday.
+Alice: Got it. Bob, have you had a chance to look into this?
+10:15 AM - 10:30 AM: Root Cause Analysis
+Bob: Yeah, I did a bit of digging. It looks like the issue is with our authentication microservice. We updated how session tokens are handled, and I think there's a bug in the token validation part.
+Charlie: We ran our usual tests on the login, but it seems like we missed this specific case. Our tests didn’t cover the token validation for valid credentials failing.
+10:30 AM - 10:45 AM: Proposed Solutions
+Emma: From a UX standpoint, we need to make sure that the error messages are helpful. But yeah, we probably need to rollback those changes or push a hotfix ASAP.
+Bob: Agreed. I can rollback the changes and deploy the previous version today. Then we'll do a more thorough code review and add tests for this scenario.
+Alice: Sounds good. Charlie, can you make sure we get those new test cases added?
+Charlie: Absolutely, I’ll get on that.
+10:45 AM - 11:00 AM: Action Items and Next Steps
+Alice: Alright, let’s sum up what needs to be done:
+ • Bob: Rollback the changes and deploy the previous version by the end of the day.
+ • Charlie: Add test cases for token validation and run regression tests.
+ • David: Draft a communication plan for affected users, explaining what happened and how we're fixing it.
+ • Emma: Improve the error message and provide clear guidance for users when they hit login issues.
+Anything else?
+All: Nope, that covers it.
+Alice: Great. Thanks, everyone. Let’s get to it and fix this.
