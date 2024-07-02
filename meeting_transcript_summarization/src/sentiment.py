@@ -10,6 +10,7 @@ class SentimentAnalyser:
 
 
     def predict(self, text):
+        text = text.split('\n')
         sentiments = self.sentiment_pipeline(text)
         
         for sentiment, line in zip(sentiments, text):
