@@ -11,9 +11,3 @@ class Summarizer:
         inputs = self.tokenizer(text, return_tensors="pt").input_ids
         outputs = self.model.generate(inputs, max_new_tokens=max_new_tokens, do_sample=False)
         return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
-
-
-def read_transcript(file_path):
-    with open(file_path, 'r') as file:
-        transcript = file.read()
-    return transcript
