@@ -1,6 +1,7 @@
 # custom dir ignores
 /models/
 /data/
+/results/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
