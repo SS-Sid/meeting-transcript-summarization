@@ -7,7 +7,7 @@ class Summarizer:
         self.tokenizer = AutoTokenizer.from_pretrained(model_dir)
         self.model = AutoModelForSeq2SeqLM.from_pretrained(model_dir)
 
-    def summarize(self, text, max_new_tokens=100):
+    def summarize(self, text):
         inputs = self.tokenizer(text, return_tensors="pt").input_ids
-        outputs = self.model.generate(inputs, max_new_tokens=max_new_tokens, do_sample=False)
+        outputs = self.model.generate(inputs, min_length=50, max_length=200, do_sample=False)
         return self.tokenizer.decode(outputs[0], skip_special_tokens=True)
