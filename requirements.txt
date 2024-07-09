@@ -11,3 +11,6 @@ scikit-learn
 pyarrow
 datasets
 accelerate >= 0.21.0
+
+# topic segmentation
+semchunk
